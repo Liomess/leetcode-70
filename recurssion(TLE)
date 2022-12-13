@@ -1,0 +1,12 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        def f(self,n,i):
+            if i>=n:
+                return 1
+            one,two=0,0
+            if i+1<=n:
+                one=f(self,n,i+1)
+            if i+2<=n:
+                two=f(self,n,i+2)
+            return one+two
+        return f(self,n,0)
